@@ -1,0 +1,63 @@
+# Node dependencies
+node_modules/
+.pnp/
+.pnp.js
+.yarn/install-state.gz
+
+# Build output
+.next/
+out/
+build/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment files (often contain secrets, not to commit)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Vercel build cache
+.vercel/
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Miscellaneous
+*.pem
+*.key
+*.p12
+
+# Cache folders
+.cache/
+.eslintcache
+
+# Ignore large files or folders you don't want in repo (adjust as needed)
+# For example, large media or exports folders
+/data/
+/exports/
+/backup/
+/large_files/
+
+# Ignore public service worker and PWA files if not needed in the repo
+**/public/sw.js
+**/public/workbox-*.js
+**/public/worker-*.js
+**/public/sw.js.map
+**/public/workbox-*.js.map
+**/public/worker-*.js.map
