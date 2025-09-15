@@ -41,6 +41,22 @@ const events = [
       "Festival Car"
     ],
   },
+   {
+    id: 1,
+    title: "Mother Mary - Feast of nativity 2025",
+    date: new Date(2025, 9, 8), // September 8, 2025
+    endDate: new Date(2025, 9, 8), // September 8, 2025
+    time: "9:00 AM - 4:00 PM",
+    location: "Akarai Kodiveri",
+    description:
+      "Togetherness with Mother Mary on her Feast of nativity",
+    image: "/events/Mother Mary - Car Procession 2025.jpg",
+    activities: [
+      "Holy Mass",
+      "Prayers",
+      "Festival Car"
+    ],
+  }
   
 ];
 
