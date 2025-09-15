@@ -89,9 +89,12 @@ export default function ContactModal() {
                   <h3 className="text-lg font-semibold mb-1">
                     Mailing Address
                   </h3>
-                  <p>REVIVAL CENTER MINNESOTA</p>
-                  <p>P.O.BOX 251431</p>
-                  <p>WOODBURY, MN 55125</p>
+                  <p>St. Loyola of Ignatius Church</p>
+                  <p>A unit of Coimbatore Diocese Society</p>
+                  <p>Akkarai Kodiveri</p>
+                  <p>Gopi Taluka</p>
+                  <p>Erode District</p>
+                  <p>Pin code: 638454</p>
                 </CardContent>
               </Card>
             </motion.div>
