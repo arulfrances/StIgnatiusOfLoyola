@@ -88,11 +88,12 @@ const aboutContent = {
   },
   team: {
     title: "Leadership Team",
-    description: "Meet the dedicated individuals who help guide our community.",
+    description: "Meet the dedicated individuals who help guide our Parishioners.",
     members: [
       {
         name: "Rev. Fr. John Paul Vincent",
         role: "Parish Priest",
+        bio:"Ordained 07-May-1995",
         image: "/assets/images/father-john-paul-vincent.jpg",
       },
     ],

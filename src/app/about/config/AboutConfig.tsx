@@ -2,6 +2,7 @@ import { LucideIcon, Shield, Heart, BookOpen, Cross } from "lucide-react";
 
 interface TeamMember {
   name: string;
+  bio: string;
   role: string;
   image: string;
 }
