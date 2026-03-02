@@ -6,9 +6,9 @@ import Image from "next/image";
 import {
   CalendarIcon,
   MapPinIcon,
-  HeartIcon,
+ // HeartIcon,
   Music2Icon,
-  HandHeartIcon,
+//  HandHeartIcon,
 } from "lucide-react";
 
 // Define Feature type for better type safety

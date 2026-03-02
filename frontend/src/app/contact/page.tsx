@@ -2,7 +2,7 @@ import ChurchLocation from "./components/ChurchLocation";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Location | Your Church Name",
+  title: "Location | St. Ignatius of Loyola Church",
   description: "Find our church location and service times",
 };
 

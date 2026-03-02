@@ -2,7 +2,7 @@ import GiveComponent from "./components/GiveComponent";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Give | Your Church Name",
+  title: "Give | St. Ignatius of Loyola Church",
   description: "Support our ministry and make a difference in our community",
 };
 

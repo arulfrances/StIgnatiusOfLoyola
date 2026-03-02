@@ -3,9 +3,9 @@ export interface ServiceTime {
   time: string;
 }
 
-export interface WhatToExpectItem {
-  description: string;
-}
+// export interface WhatToExpectItem {
+//   description: string;
+// }
 
 
 export interface LocationConfig {

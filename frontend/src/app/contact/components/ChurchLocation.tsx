@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock } from "lucide-react";
 import { locationConfig } from "../config/LocationConfig";
-import type { ServiceTime, WhatToExpectItem } from "../config/LocationConfig";
+import type { ServiceTime } from "../config/LocationConfig";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 

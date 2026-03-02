@@ -2,7 +2,7 @@ import { Calendar, MapPin, Heart } from "lucide-react";
 import { FeatureConfig } from "@/types/FeatureConfig";
 
 export const heroConfig = {
-  title: "Welcome to Revival Center Minnesota",
+  title: "Welcome to the St. Ignatius Parish Website",
   subtitle:
     "Join us in worship, fellowship, and service as we grow together in faith and love.",
   buttons: [

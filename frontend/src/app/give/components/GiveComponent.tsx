@@ -3,25 +3,37 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+//import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+//import { useRouter } from "next/navigation";
 import { giveConfig } from "../config/GiveConfig";
 import type { GivingMethod, ConstructionCard } from "../config/GiveConfig";
 import PageHeader from "@/components/sections/PageHeader";
-import { CreditCard, Smartphone, Gift } from "lucide-react";
+import { CreditCard } from "lucide-react";
+
+const isVideo = (src: string) => {
+  const videoExtensions = [".mp4", ".webm", ".ogg"];
+  return videoExtensions.some((ext) => src.toLowerCase().endsWith(ext));
+};
 
 // Map icon string keys to React components
-const iconMap: Record<string, React.ComponentType<any>> = {
-  creditcard: CreditCard,
-  smartphone: Smartphone,
-  gift: Gift,
-};
+// const iconMap: Record<string, React.ComponentType<any>> = {
+//   creditcard: CreditCard,
+//   smartphone: Smartphone,
+//   gift: Gift,
+// };
 
 export default function GiveComponent() {
   const [mounted, setMounted] = useState(false);
   const [givingMethods, setGivingMethods] = useState<GivingMethod[]>([]);
-  const router = useRouter();
+  const [selectedCard, setSelectedCard] = useState<ConstructionCard | null>(null);
+  // const router = useRouter();
 
   useEffect(() => {
     setMounted(true);
@@ -75,8 +87,8 @@ export default function GiveComponent() {
           >
             {givingMethods.map((method) => {
               // Icon key: string name of icon in lowercase, or empty string
-              const iconKey =
-                typeof method.icon === "string";
+              //     const iconKey =
+              //      typeof method.icon === "string";
 
               // Get Icon component from map or fallback to CreditCard icon
               const IconComponent = CreditCard;
@@ -118,35 +130,71 @@ export default function GiveComponent() {
             {giveConfig.constructionCards?.map((card: ConstructionCard) => (
               <Card
                 key={card.id}
-                className="hover:shadow-lg transition-shadow flex flex-col"
+                className="hover:shadow-lg transition-shadow flex flex-col cursor-pointer"
+                onClick={() => setSelectedCard(card)}
               >
-                <div className="relative h-48 w-full">
-                  <Image
-                    src={card.imageSrc}
-                    alt={card.title}
-                    fill
-                    className="object-cover rounded-t-lg"
-                    priority={false}
-                  />
+                <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
+                  {isVideo(card.imageSrc) ? (
+                    <video
+                      src={card.imageSrc}
+                      className="w-full h-full object-cover"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                    />
+                  ) : (
+                    <Image
+                      src={card.imageSrc}
+                      alt={card.title}
+                      fill
+                      className="object-cover"
+                      priority={false}
+                    />
+                  )}
                 </div>
                 <CardHeader>
                   <CardTitle>{card.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p>{card.description}</p>
-                  {card.link && (
-                    <Button
-                      variant="link"
-                      className="mt-2 p-0 text-earthYellow"
-                      onClick={() => router.push(card.link!)}
-                    >
-                      Learn More
-                    </Button>
-                  )}
                 </CardContent>
               </Card>
             ))}
           </motion.div>
+
+          {/* Media Enlargement Modal */}
+          <Dialog open={!!selectedCard} onOpenChange={() => setSelectedCard(null)}>
+            <DialogContent className="max-w-4xl p-0 overflow-hidden bg-black/90 border-none">
+              <DialogHeader className="p-4 absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/60 to-transparent text-white">
+                <DialogTitle className="text-xl font-bold">{selectedCard?.title}</DialogTitle>
+              </DialogHeader>
+              <div className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center">
+                {selectedCard && (
+                  isVideo(selectedCard.imageSrc) ? (
+                    <video
+                      src={selectedCard.imageSrc}
+                      className="max-w-full max-h-full object-contain"
+                      controls
+                      autoPlay
+                    />
+                  ) : (
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={selectedCard.imageSrc}
+                        alt={selectedCard.title}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  )
+                )}
+              </div>
+              <div className="p-4 bg-white/10 text-white backdrop-blur-md">
+                <p className="text-sm md:text-base">{selectedCard?.description}</p>
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
       </section>
     </div>

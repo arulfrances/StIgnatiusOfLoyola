@@ -1,4 +1,4 @@
-import { CreditCard, Smartphone, Gift } from "lucide-react";
+import { Smartphone } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 export interface GivingMethod {
@@ -47,10 +47,11 @@ export const giveConfig = {
       id: "Flag Pole",
       title: "Flag Pole Installation",
       description:
-        "The Church Flag Pole has been installed.",
-      imageSrc: "/assets/images/construction/foundation.jpg",
+        "Flag post - Pedestal -  Flooring Work in front of the Church",
+      imageSrc: "/assets/images/construction/Flag post - Pedestal -  Flooring Work in front of the Church.mp4",
      // link: "/construction-updates#foundation",
     },
+
     {
       id: "roofing",
       title: "Feast Car - Build work",

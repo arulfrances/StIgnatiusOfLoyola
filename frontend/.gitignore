@@ -4,9 +4,11 @@ node_modules/
 .pnp.js
 .yarn/install-state.gz
 
-# Build output
+# Next.js build output
 .next/
 out/
+
+# Production folders (optional)
 build/
 dist/
 
@@ -16,7 +18,7 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# Environment files (often contain secrets, not to commit)
+# Environment files (don’t commit secrets)
 .env
 .env.local
 .env.development
@@ -26,38 +28,31 @@ yarn-error.log*
 # Vercel build cache
 .vercel/
 
-# Editor and IDE files
+# Editor and IDE configs
 .vscode/
 .idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
 
 # OS generated files
 .DS_Store
 Thumbs.db
 
-# Miscellaneous
-*.pem
-*.key
-*.p12
-
-# Cache folders
+# Cache directories
 .cache/
 .eslintcache
 
-# Ignore large files or folders you don't want in repo (adjust as needed)
-# For example, large media or exports folders
-/data/
-/exports/
-/backup/
-/large_files/
+# Static files or folders you don’t want under version control
+# (uncomment/adjust as needed)
+# /public/sw.js
+# /public/workbox-*.js
+# /public/worker-*.js
 
-# Ignore public service worker and PWA files if not needed in the repo
-**/public/sw.js
-**/public/workbox-*.js
-**/public/worker-*.js
-**/public/sw.js.map
-**/public/workbox-*.js.map
-**/public/worker-*.js.map
+# Prisma (if you use it)
+prisma/dev.db
+prisma/dev.db-journal
+/prisma/migrations/
+/.prisma/
+/prisma/generated/
+migrations.json
+
+# Ignore build stats or analytics output (optional)
+# stats.json
