@@ -93,7 +93,7 @@ const aboutContent = {
       {
         name: "Rev. Fr. John Paul Vincent",
         role: "Parish Priest",
-        bio:"Ordained 07-May-1995",
+        bio: "Ordained 07-May-1995",
         image: "/assets/images/father-john-paul-vincent.jpg",
       },
     ],
@@ -111,7 +111,7 @@ export default function AboutPage() {
           <Image
             src={
               aboutContent.hero.backgroundImage ||
-              "/assets/icons/new-placeholder.svg"
+              "/assets/images/Church-FrontView.jpg"
             }
             alt=""
             fill
@@ -153,9 +153,8 @@ export default function AboutPage() {
                 {aboutContent.story.title}
               </h2>
               <div
-                className={`text-base md:text-lg text-pakistanGreen/80 mb-6 transition-all duration-300 px-2 ${
-                  expanded ? "max-h-none" : "max-h-96 overflow-hidden"
-                }`}
+                className={`text-base md:text-lg text-pakistanGreen/80 mb-6 transition-all duration-300 px-2 ${expanded ? "max-h-none" : "max-h-96 overflow-hidden"
+                  }`}
                 style={{ whiteSpace: "pre-line" }}
               >
                 {storyParagraphs.map((para, idx) => (

@@ -7,7 +7,7 @@ export default function CookiePage() {
       <PageHeader
         title="Cookie Preferences"
         description="Manage your cookie settings and preferences"
-        backgroundImage="/assets/icons/new-placeholder.svg"
+        backgroundImage="/assets/images/Church-FrontView.jpg"
       />
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto prose prose-lg">

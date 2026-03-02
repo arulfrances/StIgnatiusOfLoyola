@@ -21,13 +21,13 @@ export interface ConstructionCard {
   title: string;
   description: string;
   imageSrc: string;
-//  link?: string;
+  //  link?: string;
 }
 
 export const giveConfig = {
   header: {
     title: "Support Our Church",
-    backgroundImage: "/assets/icons/new-placeholder.svg",
+    backgroundImage: "/assets/images/Church-FrontView.jpg",
   },
   scripture: {
     verse:
@@ -49,7 +49,7 @@ export const giveConfig = {
       description:
         "The Church Flag Pole has been installed.",
       imageSrc: "/assets/images/construction/foundation.jpg",
-     // link: "/construction-updates#foundation",
+      // link: "/construction-updates#foundation",
     },
     {
       id: "roofing",

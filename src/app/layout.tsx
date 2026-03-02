@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: 'Revival Center Minnesota',
     images: [
       {
-        url: '/assets/icons/new-placeholder.svg',
+        url: '/assets/images/Church-FrontView.jpg',
         width: 800,
         height: 600,
         alt: 'Revival Center Minnesota',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Revival Center Minnesota',
     description: 'A vibrant, multicultural church spreading the love and hope of Jesus Christ',
-    images: ['/assets/icons/new-placeholder.svg'],
+    images: ['/assets/images/Church-FrontView.jpg'],
   },
   robots: {
     index: true,

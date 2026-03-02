@@ -24,7 +24,7 @@ export const aboutConfig = {
     content:
       "",
     buttonText: "Learn More",
-    image: "/assets/icons/new-placeholder.svg",
+    image: "/assets/images/Church-FrontView.jpg",
     imageAlt: "",
   },
   values: [
@@ -93,17 +93,17 @@ export const aboutConfig = {
     {
       name: "John Doe",
       role: "Founder & CEO",
-      image: "/assets/icons/new-placeholder.svg",
+      image: "/assets/images/Church-FrontView.jpg",
     },
     {
       name: "Jane Smith",
       role: "COO",
-      image: "/assets/icons/new-placeholder.svg",
+      image: "/assets/images/Church-FrontView.jpg",
     },
     {
       name: "Mike Johnson",
       role: "CTO",
-      image: "/assets/icons/new-placeholder.svg",
+      image: "/assets/images/Church-FrontView.jpg",
     },
   ] as TeamMember[],
   mission: {

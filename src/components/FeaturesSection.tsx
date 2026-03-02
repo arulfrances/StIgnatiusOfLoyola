@@ -6,9 +6,9 @@ import Image from "next/image";
 import {
   CalendarIcon,
   MapPinIcon,
- // HeartIcon,
+  // HeartIcon,
   Music2Icon,
-//  HandHeartIcon,
+  //  HandHeartIcon,
 } from "lucide-react";
 
 // Define Feature type for better type safety
@@ -65,7 +65,7 @@ const features: Feature[] = [
   //   description:
   //     "Spreading love, hope, and compassion through faith and community service.",
   //   icon: HeartIcon,
-  //   image: "/assets/icons/new-placeholder.svg",
+  //   image: "/assets/images/Church-FrontView.jpg",
   //   link: {
   //     text: "Learn More",
   //     href: "/mission",
@@ -77,7 +77,7 @@ const highlights: Highlight[] = [
   {
     title: "Church Feast Celebration",
     date: "July 31, 2025",
-     description:
+    description:
       "Join us for a special parish Feast and experience powerful worship, inspiring messages, and community fellowship.",
     image: "/assets/images/ChurchView.jpg",
     icon: Music2Icon,
@@ -92,7 +92,7 @@ const highlights: Highlight[] = [
   //   date: "Starting April 2024",
   //   description:
   //     "Be part of our new community outreach initiative. Together, we'll serve our neighbors and share God's love through practical acts of service.",
-  //   image: "/assets/icons/new-placeholder.svg",
+  //   image: "/assets/images/Church-FrontView.jpg",
   //   icon: HandHeartIcon,
   //   link: {
   //     text: "Get Involved",

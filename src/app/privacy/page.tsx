@@ -28,7 +28,7 @@ export default function ContactUsPage() {
     <main>
       <PageHeader
         title="Contact Us"
-        backgroundImage="/assets/icons/new-placeholder.svg"
+        backgroundImage="/assets/images/Church-FrontView.jpg"
       />
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-center">Church Location</h2>

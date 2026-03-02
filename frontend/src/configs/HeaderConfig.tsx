@@ -18,10 +18,11 @@ export const headerConfig = {
     //{ name: "Get Involved", href: "/get-involved" },
 
     { name: "Mass timings", href: "/mass-timings" },
-   
+
     { name: "Contribute", href: "/give" },
+    { name: "Construction Updates", href: "/construction-updates" },
     { name: "Events", href: "/events" },
-    
+
     { name: "Contact", href: "/contact" },
   ],
   // buttons: [

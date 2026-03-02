@@ -3,7 +3,7 @@ import { BookOpen, FileText, BookOpenText } from "lucide-react";
 export const resourcesConfig = {
   hero: {
     title: "Resources",
-    backgroundImage: "/assets/icons/new-placeholder.svg",
+    backgroundImage: "/assets/images/Church-FrontView.jpg",
   },
   categories: [
     {
@@ -37,7 +37,7 @@ export const resourcesConfig = {
       title: "Weekly Devotional",
       type: "Devotional",
       description: "Start your week with spiritual reflection",
-      image: "/assets/icons/new-placeholder.svg",
+      image: "/assets/images/Church-FrontView.jpg",
       link: "/resources/devotional",
     },
     {
@@ -45,7 +45,7 @@ export const resourcesConfig = {
       title: "Membership Forms",
       type: "Document",
       description: "Important forms for church membership",
-      image: "/assets/icons/new-placeholder.svg",
+      image: "/assets/images/Church-FrontView.jpg",
       link: "/resources/church-resources",
     },
   ],

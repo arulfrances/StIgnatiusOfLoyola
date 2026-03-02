@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: 'Experience the power of worship and community at the St. Ignatius Parish',
     images: [
       {
-        url: '/assets/icons/new-placeholder.svg',
+        url: '/assets/images/Church-FrontView.jpg',
         width: 800,
         height: 600,
         alt: ' St. Ignatius Parish Website',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   twitter: {
     title: 'Welcome to the St. Ignatius Parish Website',
     description: 'Experience the power of worship and community at the St. Ignatius Parish',
-    images: ['/assets/icons/new-placeholder.svg'],
+    images: ['/assets/images/Church-FrontView.jpg'],
   },
 };
 

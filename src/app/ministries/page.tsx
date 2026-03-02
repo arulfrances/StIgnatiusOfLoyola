@@ -7,7 +7,7 @@ export default function MinistriesPage() {
       <PageHeader
         title="Our Ministries"
         description="Discover how you can get involved in our church ministries"
-        backgroundImage="/assets/icons/new-placeholder.svg"
+        backgroundImage="/assets/images/Church-FrontView.jpg"
       />
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

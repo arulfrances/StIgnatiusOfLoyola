@@ -11,7 +11,7 @@ import Image from "next/image";
 
 export default function ChurchLocation() {
   const router = useRouter();
-  
+
   const handleClick = (link: string) => {
     router.push(link);
   };
@@ -22,7 +22,7 @@ export default function ChurchLocation() {
       <div className="relative bg-gray-900 -mt-[104px] md:-mt-[112px]">
         <div className="absolute inset-0">
           <Image
-            src={locationConfig.hero.backgroundImage || "/assets/icons/new-placeholder.svg"}
+            src={locationConfig.hero.backgroundImage || "/assets/images/Church-FrontView.jpg"}
             alt="Church location background"
             fill
             className="object-cover object-center opacity-60"
@@ -84,8 +84,8 @@ export default function ChurchLocation() {
                     referrerPolicy="no-referrer"
                   />
                 </div>
-                <Button 
-                  onClick={() => handleClick(locationConfig.location.direction)} 
+                <Button
+                  onClick={() => handleClick(locationConfig.location.direction)}
                   className="w-full bg-darkMossGreen text-white hover:bg-earthYellow">
                   Get Directions
                 </Button>

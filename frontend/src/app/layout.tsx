@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: 'St. Ignatius of Loyola Church',
     images: [
       {
-        url: '/assets/icons/new-placeholder.svg',
+        url: '/assets/images/Church-FrontView.jpg',
         width: 800,
         height: 600,
         alt: 'St. Ignatius of Loyola Church',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'St. Ignatius of Loyola Church',
     description: 'A vibrant, multicultural church spreading the love and hope of Jesus Christ',
-    images: ['/assets/icons/new-placeholder.svg'],
+    images: ['/assets/images/Church-FrontView.jpg'],
   },
   robots: {
     index: true,
