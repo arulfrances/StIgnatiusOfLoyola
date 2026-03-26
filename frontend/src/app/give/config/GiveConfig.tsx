@@ -47,8 +47,13 @@ export const giveConfig = {
       id: "Flag Pole",
       title: "Flag Pole Installation",
       description:
+<<<<<<< HEAD
         "Flag post - Pedestal -  Flooring Work in front of the Church",
       imageSrc: "/assets/images/construction/Flag post - Pedestal -  Flooring Work in front of the Church.mp4",
+=======
+        "The Church Flag Pole has been installed.",
+      imageSrc: "/assets/images/construction/foundation.jpg",
+>>>>>>> 09138d7bf3a52fbccc72be3b2d8b0942b14e5595
       // link: "/construction-updates#foundation",
     },
 

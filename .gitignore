@@ -11,6 +11,7 @@ out/
 # Production folders (optional)
 build/
 dist/
+frontend/
 
 # Logs
 npm-debug.log*
