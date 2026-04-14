@@ -1,0 +1,100 @@
+   ▲ Next.js 15.5.14
+
+   Creating an optimized production build ...
+
+[1m[33mwarn[39m[22m - The `content` option in your Tailwind CSS configuration is missing or empty.
+[1m[33mwarn[39m[22m - Configure your content sources or your generated CSS will be missing styles.
+[1m[33mwarn[39m[22m - https://tailwindcss.com/docs/content-configuration
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[14].oneOf[10].use[2]!D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[14].oneOf[10].use[3]!D:\Projects\StIgnatiusOfLoyola\src\app\globals.css': No serializer registered for PostCSSSyntaxError
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> PostCSSSyntaxError
+Failed to compile.
+
+./src/app/globals.css:1:1
+Syntax error: D:\Projects\StIgnatiusOfLoyola\src\app\globals.css The `border-border` class does not exist. If `border-border` is a custom class, make sure it is defined within a `@layer` directive.
+
+[1m[31m>[39m[22m[90m 1 | [39m[36m@tailwind[39m base[33m;[39m
+ [90m   | [39m[1m[31m^[39m[22m
+ [90m 2 | [39m[36m@tailwind[39m components[33m;[39m
+ [90m 3 | [39m[36m@tailwind[39m utilities[33m;[39m
+
+./src/app/globals.css
+Syntax error: D:\Projects\StIgnatiusOfLoyola\src\app\globals.css The `border-border` class does not exist. If `border-border` is a custom class, make sure it is defined within a `@layer` directive. (1:1)
+
+[1m[31m>[39m[22m[90m 1 | [39m[36m@tailwind[39m base[33m;[39m
+ [90m   | [39m[1m[31m^[39m[22m
+ [90m 2 | [39m[36m@tailwind[39m components[33m;[39m
+ [90m 3 | [39m[36m@tailwind[39m utilities[33m;[39m
+
+    at tryRunOrWebpackError (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:316119)
+    at __webpack_require_module__ (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:131532)
+    at __nested_webpack_require_161494__ (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:130967)
+    at D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:131824
+    at symbolIterator (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:14444)
+    at done (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:14824)
+    at Hook.eval [as callAsync] (eval at create (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:14:9224), <anonymous>:15:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:14:6378)
+    at D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:130687
+    at symbolIterator (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:14402)
+    at timesSync (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:5027)
+    at Object.eachLimit (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:14208)
+    at D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:130247
+    at symbolIterator (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:14444)
+    at timesSync (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:5027)
+    at Object.eachLimit (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:14208)
+    at D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:129985
+    at symbolIterator (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:14444)
+    at done (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:14824)
+    at D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:129496
+    at D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:110347
+    at D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:16152
+    at Array.<anonymous> (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:551693)
+    at D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:16144
+    at eval (eval at create (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:14:9224), <anonymous>:27:1)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+-- inner error --
+Syntax error: D:\Projects\StIgnatiusOfLoyola\src\app\globals.css The `border-border` class does not exist. If `border-border` is a custom class, make sure it is defined within a `@layer` directive. (1:1)
+
+[1m[31m>[39m[22m[90m 1 | [39m[36m@tailwind[39m base[33m;[39m
+ [90m   | [39m[1m[31m^[39m[22m
+ [90m 2 | [39m[36m@tailwind[39m components[33m;[39m
+ [90m 3 | [39m[36m@tailwind[39m utilities[33m;[39m
+
+    at Object.<anonymous> (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[14].oneOf[10].use[2]!D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[14].oneOf[10].use[3]!D:\Projects\StIgnatiusOfLoyola\src\app\globals.css:1:7)
+    at D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:962717
+    at Hook.eval [as call] (eval at create (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:14:9002), <anonymous>:7:1)
+    at Hook.CALL_DELEGATE [as _call] (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:14:6272)
+    at D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:131565
+    at tryRunOrWebpackError (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:316073)
+    at __webpack_require_module__ (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:131532)
+    at __nested_webpack_require_161494__ (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:130967)
+    at D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:131824
+    at symbolIterator (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:14444)
+    at done (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:14824)
+    at Hook.eval [as callAsync] (eval at create (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:14:9224), <anonymous>:15:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:14:6378)
+    at D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:130687
+    at symbolIterator (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:14402)
+    at timesSync (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:5027)
+    at Object.eachLimit (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:14208)
+    at D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:130247
+    at symbolIterator (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:14444)
+    at timesSync (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:5027)
+    at Object.eachLimit (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:14208)
+    at D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:129985
+    at symbolIterator (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:14444)
+    at done (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\neo-async\async.js:1:14824)
+    at D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:129496
+    at D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:110347
+    at D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:16152
+    at Array.<anonymous> (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:551693)
+    at D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:29:16144
+    at eval (eval at create (D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\compiled\webpack\bundle5.js:14:9224), <anonymous>:27:1)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Generated code for D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[14].oneOf[10].use[2]!D:\Projects\StIgnatiusOfLoyola\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[14].oneOf[10].use[3]!D:\Projects\StIgnatiusOfLoyola\src\app\globals.css
+
+Import trace for requested module:
+./src/app/globals.css
+
+
+> Build failed because of webpack errors
