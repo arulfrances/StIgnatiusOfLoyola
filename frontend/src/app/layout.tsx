@@ -14,7 +14,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://rcmn.church'),
+  metadataBase: new URL('https://stignatiusparish.church'),
   title: {
     template: '%s | St. Ignatius of Loyola Church',
     default: 'St. Ignatius of Loyola Church',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://rcmn.church',
+    url: 'https://stignatiusparish.church',
     title: 'St. Ignatius of Loyola Church',
     description: 'A vibrant, multicultural church spreading the love and hope of Jesus Christ',
     siteName: 'St. Ignatius of Loyola Church',

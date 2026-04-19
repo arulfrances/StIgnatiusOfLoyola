@@ -15,7 +15,7 @@ interface Value {
 
 export const aboutConfig = {
   hero: {
-    title: "About Revival Center Church",
+    title: "About St. Ignatius of Loyola Church",
     subtitle:
       "We are a church that believes in Jesus & loves God and people. We are a multi-cultural and multi-generational church committed to reaching the city of Woodbury and Beyond. We exist to help you and your family grow closer to your God-given purpose. Everyone has a first step to take in their journey. Will you take your first step this Sunday?",
   },

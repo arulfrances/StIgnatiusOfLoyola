@@ -2,7 +2,7 @@ import GetInvolvedPage from "./components/GetInvolvedPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Get Involved | Revival Center",
+  title: "Get Involved | St. Ignatius of Loyola Church",
   description: "Join us in making a difference in our community",
 };
 

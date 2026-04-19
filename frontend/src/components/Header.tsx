@@ -25,22 +25,22 @@ export default function Header() {
   return (
     <div className="fixed top-0 left-0 right-0 z-[100]">
       {/* Announcement Bar */}
-      <div className="bg-darkMossGreen text-white text-center py-2 text-sm font-medium tracking-wide">
+      <div className="bg-darkMossGreen text-white text-center py-2 text-[10px] md:text-sm font-bold tracking-widest uppercase">
         {headerConfig.subheader.content}
       </div>
 
       {/* Main Header */}
-      <div className="mx-2 sm:mx-4 mt-2 sm:mt-4">
+      <div className="container mx-auto px-4 mt-2">
         <header
           className={cn(
-            "w-full rounded-full transition-all duration-300",
-            "bg-gray-100/95 backdrop-blur-sm",
-            "border border-gray-200/20",
-            "px-2 sm:px-4",
-            isScrolled && "shadow-lg"
+            "w-full rounded-2xl md:rounded-full transition-all duration-300",
+            "bg-white/90 backdrop-blur-md shadow-sm",
+            "border border-gray-100",
+            "px-4 md:px-6",
+            isScrolled && "shadow-lg border-gray-200"
           )}
         >
-          <div className="flex items-center justify-between h-14">
+          <div className="flex items-center justify-between h-14 md:h-16">
             {/* Logo */}
             <Link href="/" className="flex-shrink-0">
               <span className="text-lg font-semibold text-gray-800">St. Ignatius of Loyola Church, Akkaraikodiveri</span>

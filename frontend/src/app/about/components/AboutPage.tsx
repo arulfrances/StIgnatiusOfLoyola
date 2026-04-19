@@ -106,7 +106,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <div className="relative bg-gray-900 -mt-[104px] md:-mt-[112px]">
+      <div className="relative bg-gray-900 -mt-[112px]">
         <div className="absolute inset-0">
           <Image
             src={
@@ -119,14 +119,14 @@ export default function AboutPage() {
             priority
             quality={100}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         </div>
 
-        <div className="relative min-h-[60vh] flex items-center">
-          <div className="container mx-auto px-4 pt-[104px] md:pt-[112px]">
+        <div className="relative min-h-[45vh] md:min-h-[50vh] flex items-center">
+          <div className="container mx-auto px-4 pt-[112px] pb-12">
             <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6">
               <motion.h1
-                className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -139,7 +139,7 @@ export default function AboutPage() {
       </div>
 
       {/* Story Section */}
-      <section className={components.sections.default}>
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div

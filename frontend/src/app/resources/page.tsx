@@ -2,7 +2,7 @@ import ResourcesPage from "./components/ResourcesPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Resources | Revival Center",
+  title: "Resources | St. Ignatius of Loyola Church",
   description: "Access spiritual resources, devotionals, and church documents",
 };
 

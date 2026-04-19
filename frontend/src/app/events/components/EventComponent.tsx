@@ -15,6 +15,7 @@ import {
 import { format, isPast, isFuture, compareDesc } from "date-fns";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
+import PageHeader from "@/components/sections/PageHeader";
 
 const events = [
   {
@@ -65,84 +66,102 @@ export default function EventPage() {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      {/* Header */}
-      <header className="mb-8 text-center">
-        <h1 className="text-3xl font-bold">Church Events</h1>
-        <p className="text-gray-600">Join us in fellowship and community</p>
-      </header>
+    <div className="bg-[#fafafa] min-h-screen pb-24 font-sans">
+      <PageHeader 
+        title="Parish Events"
+        subtitle="Join us in fellowship and community"
+        description="Stay connected through our upcoming services, festivals, and gatherings."
+        backgroundImage="/assets/images/ChurchView.jpg"
+      />
 
-      {/* List View */}
-      <div className="space-y-6">
-        {paginatedEvents.map((event) => (
-          <Card key={event.id} className="p-4 flex gap-6">
-            {/* Event Image */}
-            <div className="w-64 h-40 relative flex-shrink-0">
-              <Image
-                src={event.image}
-                alt={event.title}
-                fill
-                style={{ objectFit: "cover" }}
-                className="rounded-md"
-              />
-            </div>
-            {/* Event Info */}
-            <div className="flex flex-col flex-grow">
-              <CardHeader className="flex justify-between items-center mb-2">
-                <CardTitle className="text-xl">{event.title}</CardTitle>
-                <Badge variant="secondary">{getEventStatus(event.date)}</Badge>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <div className="mb-2 font-semibold">
-                  {format(event.date, "MMMM d, yyyy")}
-                  {event.endDate &&
-                    event.endDate.toDateString() !== event.date.toDateString() && (
-                      <> - {format(event.endDate, "MMMM d, yyyy")}</>
-                    )}
+      <div className="container mx-auto px-4 mt-12 mb-12">
+        <div className="max-w-6xl mx-auto space-y-8">
+          {paginatedEvents.map((event) => (
+            <Card key={event.id} className="group overflow-hidden border-none shadow-xl hover:shadow-2xl transition-all duration-500 rounded-[2rem] bg-white">
+              <div className="flex flex-col lg:flex-row">
+                {/* Event Image */}
+                <div className="w-full lg:w-80 h-64 lg:h-auto relative flex-shrink-0 overflow-hidden">
+                  <Image
+                    src={event.image}
+                    alt={event.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <Badge variant="secondary" className="bg-white/90 backdrop-blur-md text-darkMossGreen font-bold border-none shadow-sm capitalize">
+                      {getEventStatus(event.date)}
+                    </Badge>
+                  </div>
                 </div>
-                <p className="mb-2">{event.description}</p>
-                <p className="flex items-center gap-2 text-sm text-gray-700 mb-1">
-                  <Clock size={16} />
-                  {event.time}
-                </p>
-                <p className="flex items-center gap-2 text-sm text-gray-700">
-                  <MapPin size={16} />
-                  {event.location}
-                </p>
-                <div className="mt-3">
-                  <strong>Activities:</strong>
-                  <ul className="list-disc list-inside">
-                    {event.activities.map((activity, idx) => (
-                      <li key={idx}>{activity}</li>
-                    ))}
-                  </ul>
-                </div>
-              </CardContent>
-            </div>
-          </Card>
-        ))}
-      </div>
 
-      {/* Pagination */}
-      {totalPages > 1 && (
-        <div className="mt-6 flex justify-center gap-4">
-          <Button
-            onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-            disabled={currentPage === 1}
-          >
-            Previous
-          </Button>
-          <div className="flex items-center gap-2">
-            Page {currentPage} of {totalPages}
-          </div>
-          <Button
-            onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-            disabled={currentPage === totalPages}
-          >
-            Next
-          </Button>
+                {/* Event Info */}
+                <div className="flex flex-col flex-grow p-8">
+                  <div className="mb-4">
+                    <div className="text-earthYellow font-bold text-sm tracking-widest uppercase mb-2">
+                      {format(event.date, "MMMM d, yyyy")}
+                      {event.endDate &&
+                        event.endDate.toDateString() !== event.date.toDateString() && (
+                          <> - {format(event.endDate, "MMMM d, yyyy")}</>
+                        )}
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900 group-hover:text-darkMossGreen transition-colors">
+                      {event.title}
+                    </h3>
+                  </div>
+                  
+                  <div className="flex-grow">
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {event.description}
+                    </p>
+                    
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                      <div className="flex items-center gap-3 text-sm text-gray-500 bg-gray-50 p-3 rounded-xl border border-gray-100">
+                        <Clock className="w-4 h-4 text-darkMossGreen" />
+                        <span className="font-medium text-gray-700">{event.time}</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-sm text-gray-500 bg-gray-50 p-3 rounded-xl border border-gray-100">
+                        <MapPin className="w-4 h-4 text-darkMossGreen" />
+                        <span className="font-medium text-gray-700">{event.location}</span>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2">
+                       {event.activities.map((activity, idx) => (
+                         <span key={idx} className="px-3 py-1 bg-pakistanGreen/5 text-pakistanGreen text-[10px] font-bold uppercase tracking-widest rounded-full border border-pakistanGreen/10">
+                           {activity}
+                         </span>
+                       ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          ))}
         </div>
-      )}
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="mt-16 flex justify-center items-center gap-6">
+            <Button
+              className="rounded-full bg-white text-gray-900 border border-gray-200 hover:bg-gray-50 shadow-sm transition-all px-8 h-12 font-bold"
+              onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+              disabled={currentPage === 1}
+            >
+              Previous
+            </Button>
+            <div className="flex items-center gap-2 font-bold text-gray-500">
+              <span className="text-darkMossGreen">{currentPage}</span> / {totalPages}
+            </div>
+            <Button
+              className="rounded-full bg-darkMossGreen text-white hover:bg-pakistanGreen shadow-md transition-all px-8 h-12 font-bold"
+              onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+              disabled={currentPage === totalPages}
+            >
+              Next
+            </Button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

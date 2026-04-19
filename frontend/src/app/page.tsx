@@ -1,34 +1,36 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/Hero";
+import MassTimingsSection from "@/components/sections/MassTimingsSection";
+import ParishPriestSection from "@/components/sections/ParishPriestSection";
+import ChurchUpdatesPreview from "@/components/sections/ChurchUpdatesPreview";
 import FeaturesSection from "@/components/FeaturesSection";
 
 export const metadata: Metadata = {
-  title: 'Welcome to the St. Ignatius Parish Website',
-  description: 'Experience the power of worship and community at the St. Ignatius Parish. Join us for inspiring services, meaningful fellowship, and impactful outreach programs.',
+  title: 'St. Ignatius of Loyola Church, Akkaraikodiveri',
+  description: 'Welcome to St. Ignatius of Loyola Church. Experience powerful worship, inspiring community, and our beautiful heritage at Akkaraikodiveri.',
   openGraph: {
-    title: 'Welcome to the St. Ignatius Parish Website',
-    description: 'Experience the power of worship and community at the St. Ignatius Parish',
-    images: [
-      {
-        url: '/assets/images/Church-FrontView.jpg',
-        width: 800,
-        height: 600,
-        alt: ' St. Ignatius Parish Website',
-      },
-    ],
-  },
-  twitter: {
-    title: 'Welcome to the St. Ignatius Parish Website',
-    description: 'Experience the power of worship and community at the St. Ignatius Parish',
-    images: ['/assets/images/Church-FrontView.jpg'],
+    title: 'St. Ignatius of Loyola Church, Akkaraikodiveri',
+    description: 'Welcome to our Parish community united in faith and service.',
+    images: [{ url: '/assets/images/Church-FrontView.jpg', width: 1200, height: 630 }],
   },
 };
 
 export default function Home() {
   return (
-    <>
+    <div className="flex flex-col gap-0 overflow-x-hidden">
       <HeroSection />
+      
+      {/* Quick Info & Mass Timings */}
+      <MassTimingsSection />
+
+      {/* Parish Priest Introduction */}
+      <ParishPriestSection />
+
+      {/* Features & Highlights */}
       <FeaturesSection />
-    </>
+
+      {/* Latest Updates from Church */}
+      <ChurchUpdatesPreview />
+    </div>
   );
 }
