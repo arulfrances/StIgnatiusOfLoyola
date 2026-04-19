@@ -1,0 +1,86 @@
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  minimumScale: 1,
+  viewportFit: 'cover',
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://stignatiusparish.church'),
+  title: {
+    template: '%s | St. Ignatius of Loyola Church',
+    default: 'St. Ignatius of Loyola Church',
+  },
+  description: 'St. Ignatius of Loyola Church is a vibrant, multicultural church committed to spreading the love and hope of Jesus Christ. Join us for worship, fellowship, and community service.',
+  keywords: ['church', 'minnesota', 'revival', 'christian', 'worship', 'community', 'faith'],
+  authors: [{ name: 'St. Ignatius of Loyola Church' }],
+  creator: 'St. Ignatius of Loyola Church',
+  publisher: 'St. Ignatius of Loyola Church',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  icons: {
+    icon: '/assets/favicon_io/favicon.ico',
+    shortcut: '/assets/favicon_io/favicon.ico',
+    apple: '/assets/favicon_io/apple-touch-icon.png',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://stignatiusparish.church',
+    title: 'St. Ignatius of Loyola Church',
+    description: 'A vibrant, multicultural church spreading the love and hope of Jesus Christ',
+    siteName: 'St. Ignatius of Loyola Church',
+    images: [
+      {
+        url: '/assets/images/Church-FrontView.jpg',
+        width: 800,
+        height: 600,
+        alt: 'St. Ignatius of Loyola Church',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'St. Ignatius of Loyola Church',
+    description: 'A vibrant, multicultural church spreading the love and hope of Jesus Christ',
+    images: ['/assets/images/Church-FrontView.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        <Header />
+        <main className="flex-grow">{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}

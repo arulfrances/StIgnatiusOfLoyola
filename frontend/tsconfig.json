@@ -42,7 +42,8 @@
       ]
     },
     "baseUrl": ".",
-    "target": "ES2017"
+    "target": "ES2017",
+    "ignoreDeprecations": "6.0"
   },
   "include": [
     "next-env.d.ts",
@@ -57,3 +58,4 @@
     "**/__tests__/**"
   ]
 }
+
